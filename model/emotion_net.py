@@ -14,7 +14,7 @@ def estimate_emotions(processed_faces, model):
                 output = model(image)
                 proba = F.softmax(output, dim=1)
 
-                # it is this exact order in the fer2013 dataset
+                # it is this exact order in the fer2013 dataset, do not change labels
                 class_labels = ['Anger', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral']
 
                 prob_strings = [f'{class_labels[i]}: {proba[0, i].item():.3f}' for i in range(proba.size(1))]
@@ -48,7 +48,7 @@ class EmotionCNN(nn.Module):
         :param x: Input to the layer
         :return: Output scores from the layer
         """
-        output = self.features(x)  # pass imageс through network
+        output = self.features(x)  # pass images through network
         output = output.view(output.size(0), -1)  # flatten input
         output = self.classifier(output)  # score (classify)
 
