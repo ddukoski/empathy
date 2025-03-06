@@ -7,13 +7,21 @@ Empathy is a small computer vision and deep learning project for the Digital Ima
 Please note that the app comes with a preloaded and trained model.
 
 Required packages:
+
 NumPy (numpy), 
+
 PyTorch (torch), 
+
 Keras preprocessing library (keras-preprocessing), 
+
 OpenCV (opencv-python) for Python, 
+
 tkinter, 
+
 Pillow (pillow) and 
+
 Augmentor
+
 
 If you would like to train the model from scratch, please download the FER2013 dataset from `https://www.kaggle.com/datasets/deadskull7/fer2013` and put it in the `datasets` (create it if it doesn't exist) directory, then do the following:
   1. Run the `preprocessing/dataset_formatting.py` script (if you are using a different dataset than FER2013, make sure it matches FER2013's column and emotion number format)
